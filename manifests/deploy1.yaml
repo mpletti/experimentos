@@ -1,0 +1,31 @@
+Name:                   cloro
+Namespace:              default
+CreationTimestamp:      Mon, 19 Jun 2023 22:30:50 -0300
+Labels:                 app=cloro
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=cloro
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=cloro
+  Containers:
+   nginx:
+    Image:        nginx
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   cloro-9f4d5d8b8 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  30m   deployment-controller  Scaled up replica set cloro-9f4d5d8b8 to 1
