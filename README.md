@@ -1,2 +1,2 @@
-# estudo
-Estudo de softwares para Devops
+# experimentos dos k8s
+Estudo de softwares para Devops 
