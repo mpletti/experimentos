@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-07-15T00:53:40Z"
+  labels:
+    app: nginx
+  name: nginx
+  namespace: default
+  resourceVersion: "153987"
+  uid: ae8e7c2a-00d9-4bbd-87c0-fb6ca8acee72
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.97.81.119
+  clusterIPs:
+  - 10.97.81.119
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: "80"
+    nodePort: 32460
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: nginx
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+
