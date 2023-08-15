@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vinagre
+  name: vinagre
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vinagre
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: vinagre
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+      
+

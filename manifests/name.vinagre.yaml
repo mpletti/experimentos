@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-06-15T00:15:57Z"
+  labels:
+    kubernetes.io/metadata.name: vinagre
+  name: strigus
+  resourceVersion: "319811"
+  uid: f7f2f4ee-3cc5-4179-bbf2-53bff18b8a8e
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
