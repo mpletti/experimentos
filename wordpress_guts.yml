@@ -1,3 +1,13 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=WORD
+resources:
+  - wordpress.yaml
+ubuntu@server-letti:~$ vim kustomization.yaml
+ubuntu@server-letti:~$ ls
+Portainer  git  kustomization.yaml  minikube-linux-arm64  snap  wordpress.yaml
+ubuntu@server-letti:~$ cat wordpress.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -68,7 +78,7 @@ spec:
   selector:
     app: wordpress
     tier: mysql
-  clusterIP: None
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -116,5 +126,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         emptyDir: {}
-
 
